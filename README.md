@@ -9,7 +9,7 @@
 | **FR3** | Manage product categories | The admin must be able to create, edit, and delete product categories. |
 | **FR4** | Manage products | The admin must be able to add, edit, and delete products in the system. |
 | **FR5** | Browse and view products | Users must be able to browse available products and view detailed information about them. |
-| **FR6** | Add products to cart | Users must be able to add selected products to a shopping cart before checkout. |
+| **FR6** | Add products to order | Users must be able to add selected products to order. |
 | **FR7** | Generate sales report | The admin must be able to generate sales reports for analytical and management purposes. |
 | **FR8** | Apply discount | Users must be able to apply valid discount codes to reduce the total order cost. |
 | **FR9** | Process payment | The system must securely handle user payments for placed orders. |
