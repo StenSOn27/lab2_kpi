@@ -18,7 +18,7 @@ usecase "Edit Products" as EP
 usecase "Delete Products" as DP
 usecase "Browse Products" as BP
 usecase "View products details" as VPD
-usecase "Add to cart" as ATC
+usecase "Add to order" as ATC
 usecase "View orders" as VO
 usecase "Place order" as PO
 usecase "Make payment" as MPAY
