@@ -40,7 +40,7 @@
 | **UC8** | Edit products |
 | **UC9** | Delete products |
 | **UC10** | Generate sales report |
-| **UC11** | Add to cart |
+| **UC11** | Add to order |
 | **UC12** | Place order |
 | **UC13** | Apply discount |
 | **UC14** | Make payment |
