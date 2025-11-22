@@ -1,4 +1,4 @@
-@startuml name Lab2
+@startuml lab2
 left to right direction
 
 actor Admin
@@ -7,48 +7,45 @@ actor "Payment service" as PaymentService
 
 usecase "Authorization" as Auth
 usecase "Reset Password" as RP
+
 usecase "Manage categories" as MC
-usecase "Add categories" as AC
-usecase "Edit categories" as EC
-usecase "Delete categories" as DC
-usecase "Generate sales report" as GSR
 usecase "Manage Products" as MP
-usecase "Add Products" as AP
-usecase "Edit Products" as EP
-usecase "Delete Products" as DP
+
+usecase "Generate sales report" as GSR
+
 usecase "Browse Products" as BP
 usecase "View products details" as VPD
+
 usecase "Add to order" as ATC
-usecase "View orders" as VO
 usecase "Place order" as PO
 usecase "Make payment" as MPAY
 usecase "Apply discount" as AD
+
+usecase "View orders" as VO
 usecase "Update order Status" as UOS
 usecase "Track order status" as TOS
 
+Admin --|> Customer
 Admin --> Auth
 Customer --> Auth
+Customer --> RP
 Admin --> MC
-MC ..> AC : Use
-MC ..> EC : Use
-MC ..> DC : Use
 Admin --> MP
-MP ..> AP : Use
-MP ..> EP : Use
-MP ..> DP : Use
 Admin --> GSR
+
 Customer --> BP
-BP ..> VPD : Use
-Auth <|-- RP : Extends
-Auth ..> MC : Use
-Auth ..> MP : Use
-Auth ..> BP : Use
 Customer --> ATC
-ATC ..> PO : Use
-PO --> AD : Extends
-PO ..> MPAY : Use
-PaymentService --> MPAY
 Customer --> VO
-VO --|> UOS : Extends
-VO --|> TOS : Extends
+
+PaymentService --> MPAY
+
+BP <|-- VPD : "Extends"
+
+PO ..> MPAY : "Use"
+PO <|-- AD : "Extends"
+PO <.. ATC : "Use"
+
+VO <.. UOS : "Use"
+VO <.. TOS : "Use"
+
 @enduml

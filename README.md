@@ -4,16 +4,16 @@
 
 | **ID** | **Requirement** | **Description** |
 |--------|------------------|------------------|
-| **FR1** | User authorization | The system must allow users to securely log in to access their account and personalized features. |
-| **FR2** | Reset password | The system must allow users to reset their password in case they forget or lose it. |
+| **FR1** | User authorization | The system must allow users to log in to access all features. |
+| **FR2** | Reset password | The system must allow users to reset their password if needed. |
 | **FR3** | Manage product categories | The admin must be able to create, edit, and delete product categories. |
-| **FR4** | Manage products | The admin must be able to add, edit, and delete products in the system. |
-| **FR5** | Browse and view products | Users must be able to browse available products and view detailed information about them. |
-| **FR6** | Add products to order | Users must be able to add selected products to order. |
-| **FR7** | Generate sales report | The admin must be able to generate sales reports for analytical and management purposes. |
-| **FR8** | Apply discount | Users must be able to apply valid discount codes to reduce the total order cost. |
-| **FR9** | Process payment | The system must securely handle user payments for placed orders. |
-| **FR10** | View and manage orders | Users must be able to view
+| **FR4** | Manage products | The admin must be able to add, edit, and delete products. |
+| **FR5** | Browse and view products | Users must be able to browse product listings and view product details. |
+| **FR6** | Add products to order | Users must be able to add selected products to their order. |
+| **FR7** | Generate sales report | The admin must be able to generate sales reports. |
+| **FR8** | Apply discount | Users must be able to apply discount codes to their order. |
+| **FR9** | Process payment | The system must securely process payments through the payment service. |
+| **FR10** | View and manage orders | Users can view their orders; admins can update order status; users can track status. |
 
 
 ## **2. Non-Functional Requirements**
@@ -30,38 +30,34 @@
 
 | **ID** | **Use Case Name** |
 |--------|--------------------|
-| **UC1** | Add categories |
-| **UC2** | Edit categories |
-| **UC3** | Delete categories |
-| **UC4** | Reset password |
-| **UC5** | Browse products |
-| **UC6** | View product details |
-| **UC7** | Add products |
-| **UC8** | Edit products |
-| **UC9** | Delete products |
-| **UC10** | Generate sales report |
-| **UC11** | Add to order |
-| **UC12** | Place order |
-| **UC13** | Apply discount |
-| **UC14** | Make payment |
-| **UC15** | View orders |
-| **UC16** | Update order status |
-| **UC17** | Track order status |
----
+| **UC1** | Authorization |
+| **UC2** | Reset password |
+| **UC3** | Manage categories |
+| **UC4** | Manage products |
+| **UC5** | Generate sales report |
+| **UC6** | Browse products |
+| **UC7** | View product details |
+| **UC8** | Add to order |
+| **UC9** | Place order |
+| **UC10** | Apply discount |
+| **UC11** | Make payment |
+| **UC12** | View orders |
+| **UC13** | Update order status |
+| **UC14** | Track order status |
 
 
 
 ## **Traceability Matrix (Functional Requirements ↔ Use Cases)**
 
-| **FR \ UC** 	| **UC1** 	| **UC2** 	| **UC3** 	| **UC4** 	| **UC5** 	| **UC6** 	| **UC7** 	| **UC8** 	| **UC9** 	| **UC10** 	| **UC11** 	| **UC12** 	| **UC13** 	| **UC14** 	| **UC15** 	| **UC16** 	| **UC17** 	|
-|-------------	|:-------:	|:-------:	|:-------:	|:-------:	|:-------:	|:-------:	|:-------:	|:-------:	|:-------:	|:--------:	|:--------:	|:--------:	|:--------:	|:--------:	|:--------:	|:--------:	|:--------:	|
-| **FR1**     	|    X    	|    X    	|    X    	|    Х    	|         	|         	|    X    	|    X    	|    X    	|     X    	|     X    	|     X    	|     X    	|     X    	|     X    	|     X    	|     X    	|
-| **FR2**     	|         	|         	|         	|    X    	|         	|         	|         	|         	|         	|          	|          	|          	|          	|          	|          	|          	|          	|
-| **FR3**     	|    Х    	|    Х    	|    Х    	|         	|         	|         	|         	|         	|         	|          	|          	|          	|          	|          	|          	|          	|          	|
-| **FR4**     	|         	|         	|         	|         	|         	|         	|    Х    	|    Х    	|    Х    	|          	|          	|          	|          	|          	|          	|          	|          	|
-| **FR5**     	|         	|         	|         	|         	|    Х    	|    Х    	|         	|         	|         	|          	|          	|          	|          	|          	|          	|          	|          	|
-| **FR6**     	|         	|         	|         	|         	|         	|         	|         	|         	|         	|          	|     Х    	|          	|          	|          	|          	|          	|          	|
-| **FR7**     	|         	|         	|         	|         	|         	|         	|         	|         	|         	|     Х    	|          	|          	|          	|          	|          	|          	|          	|
-| **FR8**     	|         	|         	|         	|         	|         	|         	|         	|         	|         	|          	|          	|          	|     Х    	|          	|          	|          	|          	|
-| **FR9**     	|         	|         	|         	|         	|         	|         	|         	|         	|         	|          	|          	|     Х    	|          	|     Х    	|          	|          	|          	|
-| **FR10**    	|         	|         	|         	|         	|         	|         	|         	|         	|         	|          	|          	|     Х    	|          	|          	|     Х    	|     Х    	|     Х    	|
+| **FR \ UC** | UC1 Auth | UC2 Reset | UC3 Manage Cat | UC4 Manage Prod | UC5 Report | UC6 Browse | UC7 View | UC8 AddToOrder | UC9 PlaceOrder | UC10 ApplyDisc | UC11 Pay | UC12 ViewOrd | UC13 UpdateStat | UC14 Track |
+|-------------|:--------:|:---------:|:---------------:|:----------------:|:----------:|:----------:|:--------:|:--------------:|:--------------:|:--------------:|:--------:|:------------:|:---------------:|:----------:|
+| **FR1 Authorization** | X | X | X | X | X | X | X | X | X | X | X | X | X | X |
+| **FR2 Reset password** |   | X |   |   |   |   |   |   |   |   |   |   |   |   |
+| **FR3 Manage categories** |   |   | X | X | X | X | X | X | X | X | X | X | X | X |
+| **FR4 Manage products** |   |   |   | X | X | X | X | X | X | X | X | X | X | X |
+| **FR5 Browse & view products** |   |   |   |   |   | X | X |  |  |  |  |  |  |  |
+| **FR6 Add products to order** |   |   |   |   |   |   |   | X | X |  |  |  |  |  |
+| **FR7 Generate sales report** |   |   | X | X | X |   |   |   |   |   |   |   |   |   |
+| **FR8 Apply discount** |   |   |   |   |   |   |   | Х | X | X |   |   |   |   |
+| **FR9 Process payment** |   |   |   |   |   |   |   |   | X |   | X |   |   |   |
+| **FR10 View & manage orders** |   |   |   |   |   |   |   |   | X |   | X | X | X | X |
